@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="nl">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Gradient en animatie met variabelen</title>
     <style>
-    html {
+      :root {
+        --gradient-1: rgba(255, 80, 30, 1);
+        --gradient-2: rgba(95, 0, 190, 1);
+        --gradient-3: rgba(218, 165, 32, 1);
+        --gradient-4: rgba(240, 240, 240, 1);
+        --delay-1: fadeIn 1200ms forwards;
+        --delay-2: fadeIn 1600ms forwards;
+        --delay-3: fadeIn 2000ms forwards;
+      }
+
+      html {
         box-sizing: border-box;
-    }
+      }
 
-    *,
-    *:before,
-    *:after {
+      *,
+      *:before,
+      *:after {
         box-sizing: inherit;
-    }
+      }
 
-    body {
+      body {
         background: black;
         margin: 0;
         padding: 0;
-    }
+      }
 
-    .container {
+      .container {
         min-height: 100vh;
         padding: 2rem;
         display: flex;
         flex-wrap: wrap;
         place-content: center;
-    }
+      }
 
-    .ball {
+      .ball {
+        animation: var(--delay-2);
         animation: fadeIn 1200ms forwards;
         width: 15rem;
         height: 15rem;
@@ -38,27 +48,45 @@
         opacity: 0;
         transform: scale(0);
         border: 1px solid white;
-    }
+        background: linear-gradient(
+          40deg,
+          var(--gradient-2),
+          var(--gradient-1)
+        );
+      }
 
-    .ball:nth-child(2) {}
+      .ball:nth-child(2) {
+        background: linear-gradient(
+          30deg,
+          var(--gradient-3),
+          var(--gradient-1)
+        );
+        animation: var(--delay-2);
+      }
 
-    .ball:nth-child(3) {}
+      .ball:nth-child(3) {
+        background: linear-gradient(
+          30deg,
+          var(--gradient-4),
+          var(--gradient-1)
+        );
+        animation: var(--delay-3);
+      }
 
-    @keyframes fadeIn {
+      @keyframes fadeIn {
         100% {
-            opacity: 1;
-            transform: scale(1);
+          opacity: 1;
+          transform: scale(1);
         }
-    }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="ball"></div>
-        <div class="ball"></div>
-        <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
     </div>
-</body>
-
+  </body>
 </html>
