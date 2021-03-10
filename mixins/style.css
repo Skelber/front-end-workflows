@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 50px;
+}
+
+.nav {
+  color: #0a3e5f;
+  border: 3px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  justify-content: space-around;
+  background-color: pink;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.nav a:hover {
+  color: black;
+}
+
+.fotocontainer {
+  margin-top: 100px;
+  color: #0a3e5f;
+  border: 3px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin: 50px;
+}
+
+.afbeelding {
+  color: #0a3e5f;
+  border: 3px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 60%;
+  margin: auto;
+  height: 500px;
+  background-image: url(./img/cover.jpg);
+}
+
+.main {
+  margin-top: 100px;
+  color: #0a3e5f;
+  border: 3px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  justify-content: space-between;
+}
+.main .block {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  width: 50%;
+  display: block;
+  margin: 30px auto;
+  background-color: pink;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px grey;
+}
+
+footer {
+  color: #0a3e5f;
+  border: 3px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin-top: 100px;
+  color: #0a3e5f;
+  border: 5px solid black;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,127 @@
+//variabelen 
+
+$color1: pink;
+$color2: black;
+$color3: white;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    background: $color2;
+    color: $color3;
+    padding: 50px;
+}
+
+//Mixins
+
+@mixin bordered($color, $width: 2px) {
+   color: #0a3e5f;
+   border: $width solid black;
+   width: 100%; 
+}
+
+@mixin flex {
+    @include bordered($color: $color3, $width: 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    padding: 50px
+}
+
+@mixin button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    width: 50%;
+    display: block;
+    margin: 30px auto;
+    background-color: $color1;
+    color: $color3;
+    font-weight: bold; 
+    transition: 0.5s;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 5px   grey;
+        }
+}
+
+@mixin margin {
+    margin-top: 100px;
+}
+
+
+
+@mixin background-image {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+//endMixins
+
+.nav {
+    @include flex;
+    justify-content: space-around;
+    background-color: $color1;
+    
+    a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+    &:hover {
+        color: $color2;
+    }
+    }
+}
+
+.fotocontainer {
+    @include margin;
+    @include flex;
+    margin: 50px;
+    
+}
+
+.afbeelding {
+    @include flex;
+    @include background-image;
+    width: 60%;
+    margin: auto;
+    height: 500px;
+    background-image: url(./img/cover.jpg)
+
+}
+
+.main {
+    @include margin;
+    @include flex;
+    justify-content: space-between;
+
+     
+    .block {
+        margin: 20px
+    }
+}
+
+button {
+    @include button
+}
+
+
+footer {
+    @include flex;
+    @include margin;
+    @include bordered($color: #86366e, $width: 5px);
+}
+
+
+
